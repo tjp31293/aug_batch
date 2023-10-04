@@ -13,3 +13,7 @@ class userdata(db.Model):
     address    = db.Column('stud_address', db.String(50))
     username   = db.Column('stud_username', db.String(50))
     password   = db.Column('stud_password', db.String(50))
+
+with app.app_context():
+    db.create_all()
+    print("Table Created.....")
